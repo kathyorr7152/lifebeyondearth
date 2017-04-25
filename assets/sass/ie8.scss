@@ -3,179 +3,133 @@
 @import 'libs/mixins';
 
 /*
-	Helios by HTML5 UP
+	Tessellate by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Basic */
 
-	a {
-		border-bottom: solid 1px #ddd;
+	.image {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
 	}
 
-	hr {
-		border-top: solid 1px #777;
-		border-bottom: solid 1px #777;
-	}
-
-	.timestamp {
-		color: #777;
+	.button {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
 /* Section/Article */
 
-	section, article {
-		> .last-child, &.last-child {
-			margin-bottom: 0;
-		}
+	section > .last-child,
+	article > .last-child,
+	section.last-child,
+	article.last-child {
+		margin-bottom: 0;
 	}
 
 /* List */
 
-	ul {
-		&.divided {
-			li {
-				border-top: solid 1px #777;
-			}
+	ul.icons {
+		a {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+			border: solid 1px #ddd;
 		}
-		&.menu {
-			li {
-				border-left: solid 1px #777;
+	}
+
+/* Form */
+
+	form {
+		input.text,
+		select,
+		.select,
+		textarea {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+			border: solid 1px #ddd;
+			line-height: 1.25em;
+		}
+
+		select {
+			position: relative;
+
+			option {
+				color: #000;
 			}
 		}
 
-		&.icons {
-			background: #333;
-			-ms-behavior: url('assets/js/ie/PIE.htc');
+		.select {
+			select {
+				width: 100%;
+			}
+
+			&:before {
+				display: none;
+			}
 		}
 	}
 
 /* Button */
 
 	.button {
-		-ms-behavior: url('assets/js/ie/PIE.htc');
+		&.alt {
+			border: solid 1px #ddd;
+		}
 	}
 
-/* Icons */
+/* Feature Icon */
 
-	.icon.circled {
-		-ms-behavior: url('assets/js/ie/PIE.htc');
+	.feature-icon {
+		padding-bottom: 0;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+
+		.icon {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+			background: #fff;
+
+			&:before {
+				font-size: 6em;
+				color: #3d3d3d;
+			}
+		}
 	}
 
 /* Header */
 
 	#header {
+		background-image: url('../../images/header.jpg');
+		background-size: cover;
+		background-position: auto;
+		background-repeat: no-repeat;
 		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
 	}
 
-	body.homepage {
-		#header {
-			height: auto;
-			min-height: 0;
-			padding: 12em 0 12em 0;
+/* Main Sections */
 
-			&:after {
-				display: none;
-			}
-		}
-	}
-
-/* Nav */
-
-	#nav {
-		> ul {
-			&:before, &:after {
-				border-top: solid 1px #777;
-				border-bottom: solid 1px #777;
+	.main {
+		> .content {
+			&.style1 {
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#412e4c, endColorstr=#a56365);
 			}
 
-			> li {
-				-ms-behavior: url('assets/js/ie/PIE.htc');
-
-				&.active {
-					border-color: #999;
-				}
-			}
-		}
-	}
-
-	.dropotron {
-		background: #fff;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
-
-		li {
-			border-color: #eee;
-			padding-right: 1em;
-			color: #5b5b5b;
-		}
-
-		&.level-0 {
-			box-shadow: none !important;
-			margin-top: 1em;
-		}
-	}
-
-/* Carousel */
-
-	.carousel {
-		.forward, .backward {
-			border-radius: 100%;
-			background-color: #483949;
-			width: 7em;
-			height: 7em;
-			margin-top: -3.5em;
-			border-radius: 100%;
-			-ms-behavior: url('assets/js/ie/PIE.htc');
-
-			&:before {
-				display: none;
-			}
-		}
-
-		.forward {
-			right: -3.5em;
-		}
-
-		.backward {
-			left: -3.5em;
-		}
-	}
-
-/* Footer */
-
-	#footer {
-		ul {
-			&.divided {
-				li {
-					border-color: #3B373C;
-				}
+			&.style2 {
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#85505f, endColorstr=#384955);
 			}
 
-			&.menu {
-				li {
-					border-color: #3B373C;
-				}
-			}
-		}
-
-		hr {
-			border-color: #3B373C;
-		}
-
-		.icons {
-			background: #2F2930;
-		}
-
-		.copyright {
-			color: #777;
-			a {
-				color: #aaa;
-				border: 0;
-
-				&:hover {
-					color: #ccc;
-				}
+			&.style3 {
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#2f394e, endColorstr=#5f796b);
 			}
 		}
 	}
